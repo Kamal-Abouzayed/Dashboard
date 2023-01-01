@@ -22,7 +22,7 @@
                                     <x-form.form url="{{ route('dashboard.login_submit') }}">
                                         <x-form.input name="email" type="email" />
                                         <x-form.input name="password" type="password" />
-                                        <x-form.button>Login</x-form.button>
+                                        <x-form.button class="btn btn-primary">Login</x-form.button>
                                     </x-form.form>
                                     </form>
                                 </div>
