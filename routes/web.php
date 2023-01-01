@@ -19,6 +19,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'welcome')->name('home');
 
-Route::prefix('dashboard')->group(function () {
-    Route::view('/', 'dashboard.home');
+Route::prefix('dashboard')->name('dashboard.')->group(function () {
+    Route::view('/', 'dashboard.home')->name('home');
 });
