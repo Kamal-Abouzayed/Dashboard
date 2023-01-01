@@ -6,7 +6,7 @@
         <div class="sidebar-brand-icon rotate-n-15">
             <i class="fas fa-laugh-wink"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+        <div class="sidebar-brand-text mx-3">Dashboard</div>
     </a>
 
     <!-- Divider -->
@@ -21,8 +21,8 @@
 
     <!-- Nav Item - Users -->
     <li class="nav-item active">
-        <a class="nav-link" href="index.html">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
+        <a class="nav-link" href="{{ route('dashboard.users.index') }}">
+            <i class="fas fa-fw fa-users"></i>
             <span>Users</span></a>
     </li>
 </ul>

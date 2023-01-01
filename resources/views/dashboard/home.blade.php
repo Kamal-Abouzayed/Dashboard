@@ -10,7 +10,7 @@
             @endslot
         </x-dashboard.statistic>
 
-        {{-- categories --}}
+    {{-- categories --}}
         <x-dashboard.statistic
             name="categories"
             count="500"

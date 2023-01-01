@@ -1,6 +1,6 @@
 @props(['url', 'method'])
 
-<form class="card shadow mb-4" action="{{ $url }}" method="POST" enctype="multipart/form-data">
+<form {{ $attributes->merge(['class' => '']) }} action="{{ $url }}" method="POST" enctype="multipart/form-data">
     @csrf
 
     @if (isset($method))

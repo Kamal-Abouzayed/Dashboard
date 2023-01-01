@@ -19,6 +19,14 @@ use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'welcome')->name('home');
 
-Route::prefix('dashboard')->name('dashboard.')->group(function () {
-    Route::view('/', 'dashboard.home')->name('home');
+Route::prefix('dashboard')->namespace('Dashboard')->name('dashboard.')->group(function () {
+
+    Route::get('login', 'AuthController@loginForm')->name('login_form');
+    Route::post('login', 'AuthController@login')->name('login_submit');
+    Route::get('logout', 'AuthController@logout')->name('logout');
+
+    Route::middleware(['auth'])->group(function () {
+        Route::view('/', 'dashboard.home')->name('home');
+        Route::resource('users', 'UserController')->names('users');
+    });
 });
